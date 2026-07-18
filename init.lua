@@ -84,19 +84,6 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
-vim.g.clipboard = {
-  name = 'dms',
-  copy = {
-    ['+'] = { 'dms', 'cl', 'copy' },
-    ['*'] = { 'dms', 'cl', 'copy' },
-  },
-  paste = {
-    ['+'] = { 'dms', 'cl', 'paste' },
-    ['*'] = { 'dms', 'cl', 'paste' },
-  },
-  cache_enabled = 0,
-}
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -975,7 +962,6 @@ require('lazy').setup({
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-  require 'plugins.base46',
   require 'plugins.barbar',
   require 'kickstart.plugins.neo-tree',
 
@@ -1013,8 +999,6 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
-vim.cmd.colorscheme 'dms'
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
